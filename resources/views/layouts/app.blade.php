@@ -11,6 +11,11 @@
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
+    <script type="text/javascript" src="{{ URL::asset('js/clean-blog.js') }}"></script>
+    <script type="text/javascript" src="{{ URL::asset('js/clean-blog.min.js') }}"></script>
+    <script type="text/javascript" src="{{ URL::asset('js/contact_me.js') }}"></script>
+    <script type="text/javascript" src="{{ URL::asset('js/jqBootstrapValidation.js') }}"></script>
+    
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
