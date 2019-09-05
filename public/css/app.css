@@ -10647,6 +10647,7 @@ a.text-dark:focus {
 body {
   font-size: 20px;
   color: #212529;
+  font-family: "Lora", "Times New Roman", serif;
 }
 
 p {
@@ -10665,10 +10666,12 @@ h4,
 h5,
 h6 {
   font-weight: 800;
+  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 a {
   color: #212529;
+  transition: all 0.2s;
 }
 
 a:focus,

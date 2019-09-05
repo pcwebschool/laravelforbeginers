@@ -9,14 +9,6 @@
 
     <title>{{ config('app.name', 'Laravel') }}</title>
 
-    <!-- Scripts -->
-    <script src="{{ asset('js/app.js') }}" defer></script>
-    <script type="text/javascript" src="{{ URL::asset('js/clean-blog.js') }}"></script>
-    <script type="text/javascript" src="{{ URL::asset('js/clean-blog.min.js') }}"></script>
-    <script type="text/javascript" src="{{ URL::asset('js/contact_me.js') }}"></script>
-    <script type="text/javascript" src="{{ URL::asset('js/jqBootstrapValidation.js') }}"></script>
-    
-
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
@@ -25,12 +17,19 @@
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 </head>
 <body>
+  
+  @if (!\Request::is('login') && !\Request::is('register'))
+      
+      <!-- Navigation -->
+      @include('partial.navbar')
+      
+      <!-- Page Header -->
+      @include('partial.pageheader')
 
-  <!-- Navigation -->
-  @include('partial.navbar')
+  @endif
 
-  <!-- Page Header -->
-  @include('partial.pageheader')
+
+
 
   <!-- Main Content -->
   <div class="container">
@@ -38,15 +37,12 @@
       <div class="col-lg-8 col-md-10 mx-auto">
 
         @yield('content')
-        <!-- Pager -->
-        <div class="clearfix">
-          <a class="btn btn-primary float-right" href="#">Older Posts &rarr;</a>
-        </div>
+        
       </div>
 
-        @include('partial.sidebar')
-  
-    </div>
+      @if (!\Request::is('login') && !\Request::is('register'))
+        @include('partial.sidebar')              
+      @endif
   </div>
 
   <hr>
@@ -88,6 +84,13 @@
     </div>
   </footer>
 </div>
+
+<!-- Scripts -->
+<script src="{{ asset('js/app.js') }}" defer></script>
+<script type="text/javascript" src="{{ URL::asset('js/clean-blog.js') }}"></script>
+<script type="text/javascript" src="{{ URL::asset('js/clean-blog.min.js') }}"></script>
+<script type="text/javascript" src="{{ URL::asset('js/contact_me.js') }}"></script>
+<script type="text/javascript" src="{{ URL::asset('js/jqBootstrapValidation.js') }}"></script>
 </body>
 </html>
 

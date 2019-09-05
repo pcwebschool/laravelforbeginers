@@ -11,12 +11,12 @@
 |
 */
 
-Route::get('welcome', function () {
-    return view('welcome');
-});
+// Route::get('welcome', function () {
+//     return view('welcome');
+// });
 
 Route::get('/', function () {
-    return view('home');
+    return view('welcome');
 });
 
 Route::get('/about', function () {
@@ -32,4 +32,4 @@ Route::get('/contact', function () {
 });
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/dashboard', 'DashboardController@index')->name('dashboard');
