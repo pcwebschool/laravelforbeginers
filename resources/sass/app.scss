@@ -8,4 +8,11 @@
 @import '~bootstrap/scss/bootstrap';
 
 //style theme
-@import 'clean-blog';
+@import "mixins.scss";
+@import 'login';
+@import 'register';
+@import 'navbar';
+@import 'masthead';
+@import 'bootstrap-overrides';
+@import 'post';
+@import 'custom';

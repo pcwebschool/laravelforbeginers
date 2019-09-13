@@ -32,4 +32,7 @@ Route::get('/contact', function () {
 });
 Auth::routes();
 
+//the Dasboard routes
 Route::get('/dashboard', 'DashboardController@index')->name('dashboard');
+//the Posts routes
+Route::resource('posts', 'PostsController');

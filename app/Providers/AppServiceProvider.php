@@ -4,6 +4,7 @@ namespace App\Providers;
 
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Support\Facades\Schema; //NEW: Import Schema
+use App\Http\Request
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -22,8 +23,10 @@ class AppServiceProvider extends ServiceProvider
      *
      * @return void
      */
-    public function boot()
+    public function boot(Request $request)
     {
         Schema::defaultStringLength(191); //NEW: Increase StringLength
+
+        $path_array = $request->segments();
     }
 }
