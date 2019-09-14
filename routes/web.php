@@ -32,7 +32,19 @@ Route::get('/contact', function () {
 });
 Auth::routes();
 
+// Route::group(['namespace' => 'Admin', 'prefix' => 'admin'], function () {
+//     Route::get('/', 'AdminControllers\Auth\LoginController@showLoginForm');
+//     Route::post('login', 'AdminControllers\Auth\LoginController@login');
+//     Route::post('logout', 'AdminControllers\Auth\LoginController@logout');
+// });
+
+// Route::group(['namespace' => 'Front', 'prefix' => 'front'], function () {
+//     Route::get('/', 'FrontControllers\Auth\LoginController@showLoginForm');
+//     Route::post('login', 'FrontControllers\Auth\LoginController@login');
+//     Route::post('logout', 'FrontControllers\Auth\LoginController@logout');
+// });
+
 //the Dasboard routes
-Route::get('/dashboard', 'DashboardController@index')->name('dashboard');
+// Route::get('/admin', 'DashboardController@index')->name('dashboard');
 //the Posts routes
-Route::resource('posts', 'PostsController');
+// Route::resource('posts', 'PostsController');

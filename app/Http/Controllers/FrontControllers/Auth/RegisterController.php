@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers\Auth;
+namespace App\Http\Controllers\FrontControllers\Auth;
 
 use App\User;
 use App\Http\Controllers\Controller;
@@ -28,7 +28,7 @@ class RegisterController extends Controller
      *
      * @var string
      */
-    protected $redirectTo = '/dashboard';
+    protected $redirectTo = '/admin';
 
     /**
      * Create a new controller instance.

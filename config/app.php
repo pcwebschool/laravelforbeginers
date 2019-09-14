@@ -56,7 +56,7 @@ return [
 
     'asset_url' => env('ASSET_URL', null),
 
-    'app_scope' => 'front',
+    'app_scope' => 'front', //this is the scope for the page access, wether is user or is admin
 
     'admin_route' => 'admin',
 

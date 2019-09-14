@@ -36,7 +36,7 @@ class PostsController extends Controller
     public function store(Request $request)
     {
         //return view
-        return ('this is posts');
+        return view('this is posts');   
     }
 
     /**
