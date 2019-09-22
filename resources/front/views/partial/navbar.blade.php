@@ -21,7 +21,7 @@
                 <a class="nav-link" href="post">Sample Post</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="dashboard">Dashboard</a>
+                    <a class="nav-link" href="admin">Dashboard</a>
                 </li>
                 @endif
                 <li class="nav-item">

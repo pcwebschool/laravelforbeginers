@@ -45,6 +45,7 @@ Auth::routes();
 // });
 
 //the Dasboard routes
-// Route::get('/admin', 'DashboardController@index')->name('dashboard');
+Route::get('/admin', 'AdminController@index')->name('admin');
+Route::get('/admin/posts', 'AdminController@posts')->name('posts');
 //the Posts routes
 // Route::resource('posts', 'PostsController');
