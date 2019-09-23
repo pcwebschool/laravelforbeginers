@@ -39,6 +39,6 @@ class AdminController extends Controller
         $posts = Post::get();
         
         // return $posts;
-        return view('posts', ['posts' => $posts]);
+        return view('posts.index', ['posts' => $posts]);
     }
 }
