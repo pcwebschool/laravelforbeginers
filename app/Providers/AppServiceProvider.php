@@ -40,9 +40,9 @@ class AppServiceProvider extends ServiceProvider
 
         //if App scope is admin then define View/Theme folder path
         if ($app_scope == 'admin') {
-            $path = resource_path('admin/views');
+            $path = resource_path('views/admin');
         } else {
-            $path = resource_path('front/views');
+            $path = resource_path('views/front');
         }
 
         view()->addLocation($path);

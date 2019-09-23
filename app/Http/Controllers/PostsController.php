@@ -14,7 +14,8 @@ class PostsController extends Controller
      */
     public function index()
     {
-        //
+        //return view
+        return view('index');
     }
 
     /**
@@ -24,8 +25,9 @@ class PostsController extends Controller
      */
     public function create()
     {
+        // return 'test';
         //return view
-        return view('posts.create');
+        return view('front.posts.store');
     }
 
     /**
@@ -36,8 +38,12 @@ class PostsController extends Controller
      */
     public function store(Request $request)
     {
-        //return view
-        return view('this is posts');   
+        // $posts = \App\Post::first();
+        // $posts = DB::table('posts')->get();
+        $posts = Post::get();
+        
+        // return $posts;
+        return view('posts.index', ['posts' => $posts]);
     }
 
     /**

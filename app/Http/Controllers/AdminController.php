@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\DB;
 use App\Post;
+use App\User;
 
 class AdminController extends Controller
 {
@@ -24,7 +25,7 @@ class AdminController extends Controller
      */
     public function index()
     {
-        return view('index');
+        return view('admin.index');
     }
 
     /**
@@ -40,5 +41,21 @@ class AdminController extends Controller
         
         // return $posts;
         return view('posts.index', ['posts' => $posts]);
+    }
+
+
+    /**
+     * This is the Admin View for the Users
+     *
+     * @return void
+     */
+    public function users()
+    {   
+        // $users = \App\User::first();
+        // $users = DB::table('users')->get();
+        $users = User::get();
+        
+        // return $users;
+        return view('users.index', ['users' => $users]);
     }
 }
